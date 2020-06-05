@@ -1,9 +1,9 @@
 import React from 'react';
 
-import logo from './fist.png';
-import stripe from './redpaint.png';
-import './App.css';
-import './fonts/fonts.css'
+import logo from '../fist.png';
+import stripe from '../redpaint.png';
+import '../App.css';
+import '../fonts/fonts.css'
 
 export default function Header() {
     return(
