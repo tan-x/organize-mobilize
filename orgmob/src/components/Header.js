@@ -9,9 +9,9 @@ export default function Header() {
     return(
         <div className="org-header">
             <img src={stripe} className="stripe" />
-            <h1 id="organize">Organize</h1>
+            <h1 id="organize">OrgAnize</h1>
             <img src={logo} className="App-logo" alt="logo" />
-            <h1 id="mobilize">Moblize</h1>
+            <h1 id="mobilize">mObliZe</h1>
         </div>
     )
 } 
