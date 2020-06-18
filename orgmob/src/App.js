@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './components/Header'
 import Category from './components/Category'
 import Link from './components/Link'
+import Data from './Data'
 import './App.css';
 
 class App extends React.Component {
@@ -41,23 +42,45 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <main>
-          {this.state.showCategory &&
-          <>
-            <Category title="volunteer" text="Volunteer" onClick={this.handleClick} />
-            <Category title="donate" text="Donate" onClick={this.handleClick} />
-            <Category title="petition" text="Petition" onClick={this.handleClick}/>
-          </>
-          }
-          
-        </main>
-        <main>
-          {this.state.showLinks.volunteer && <Link title="ACLU" link="www.aclu.org"/>}
-          {this.state.showLinks.donate && <Link title="Donate Now" link="www.aclu.org"/>}
-          {this.state.showLinks.petition && <Link title="Sign Petition" link="www.aclu.org"/>}
-          {!this.state.showCategory && <Link title="Back" onClick={this.handleBackClick}/>}
-        </main>
+        <div className="bg"></div>
+          <Header />
+          <main>
+            {this.state.showCategory &&
+            <>
+              <Category title="volunteer" text="Volunteer" onClick={this.handleClick} />
+              <Category title="donate" text="Donate" onClick={this.handleClick} />
+              <Category title="petition" text="Petition" onClick={this.handleClick}/>
+            </>
+            }
+            
+          </main>
+          <main>
+            {this.state.showLinks.volunteer && 
+            <>
+              <Link title="ACLU" link="www.aclu.org"/>
+              <Link title="ACLU" link="www.aclu.org"/>
+              <Link title="ACLU" link="www.aclu.org"/>
+              <Link title="ACLU" link="www.aclu.org"/>
+            </>
+            }
+            {this.state.showLinks.donate && 
+            <>
+              {Data.donate.map(item => {
+                return (
+                  <Link title={item.name} link={item.link}/>
+                )
+              })}
+            </>
+            }
+            {this.state.showLinks.petition && 
+            <>
+              <Link title="Sign Petition" link="www.aclu.org"/>
+              <Link title="Sign Petition" link="www.aclu.org"/>
+              <Link title="Sign Petition" link="www.aclu.org"/>
+            </>
+            }
+            {!this.state.showCategory && <Link title="Back" onClick={this.handleBackClick}/>}
+          </main>
       </div>
     )
   }

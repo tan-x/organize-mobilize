@@ -1,8 +1,12 @@
 @font-face {
-    font-family: sprayFont;
-    src: url(sprayme.ttf)
+    font-family: Childrenoftherevolution;
+    src: url(Childrenoftherevolution.ttf)
   }
   
   h1 {
-    font-family: sprayFont;
+    font-family: Childrenoftherevolution;
+  }
+
+  h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
